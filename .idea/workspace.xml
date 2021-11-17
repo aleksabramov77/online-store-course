@@ -5,32 +5,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4ae0c8d-6e6b-4b6c-86ec-86cc440a266e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/online-store-course.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/brandController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/deviceController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/typeController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/diagram.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/error/ApiError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/ErrorHandlingMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/models.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/brandRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/deviceRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/typeRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/userRouter.js" afterDir="false" />
+    <list default="true" id="f4ae0c8d-6e6b-4b6c-86ec-86cc440a266e" name="Default Changelist" comment="01 server before JWT">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +61,16 @@
       <workItem from="1637182736372" duration="63000" />
       <workItem from="1637182826796" duration="68000" />
       <workItem from="1637182907470" duration="55000" />
-      <workItem from="1637182974292" duration="382000" />
+      <workItem from="1637182974292" duration="883000" />
     </task>
+    <task id="LOCAL-00001" summary="01 server before JWT">
+      <created>1637183459079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637183459079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +92,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/server" />
     </ignored-roots>
+    <MESSAGE value="01 server before JWT" />
+    <option name="LAST_COMMIT_MESSAGE" value="01 server before JWT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="257" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1637082719203">
