@@ -4,7 +4,6 @@ import Basket from './pages/Basket'
 import Shop from './pages/Shop'
 import DevicePage from './pages/DevicePage'
 import Auth from './pages/Auth'
-import React from 'react'
 
 export const authRoutes = [
     {
