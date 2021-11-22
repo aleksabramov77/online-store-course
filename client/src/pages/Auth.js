@@ -1,12 +1,12 @@
 import React from 'react'
-import Container from 'react-bootstrap/cjs/Container'
-import Card from 'react-bootstrap/cjs/Card'
-import Form from 'react-bootstrap/cjs/Form'
-import Button from 'react-bootstrap/cjs/Button'
-import Row from 'react-bootstrap/cjs/Row'
+import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../utils/consts'
 import { NavLink, useLocation } from 'react-router-dom'
-import Col from 'react-bootstrap/cjs/Col'
 
 const Auth = () => {
     const location = useLocation()
@@ -35,18 +35,20 @@ const Auth = () => {
                             placeholder="Введите ваш пароль ..."
                         />
                     </Form.Group>
-                        <Row className="mt-3 align-items-center">
-                            <Col md='auto' className="flex-grow-1 ">
-                                {isLogin
+                    <Row className="mt-3 align-items-center">
+                        <Col
+                            md='auto'
+                            className="flex-grow-1 w-auto">
+                            {isLogin
                                 ? <>Нет аккаунта? <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйся</NavLink></>
                                 : <>Есть аккаунт? <NavLink to={LOGIN_ROUTE}>Войдите</NavLink></>
-                                }                            </Col>
-                            <Col className="text-end">
-                                <Button type='button' variant="outline-success">
-                                    {isLogin ? "Войти": "Регистрация"}
-                                </Button>
-                            </Col>
-                        </Row>
+                            }                            </Col>
+                        <Col className="text-end">
+                            <Button type='button' variant="outline-success">
+                                {isLogin ? 'Войти' : 'Регистрация'}
+                            </Button>
+                        </Col>
+                    </Row>
                 </Form>
 
             </Card>

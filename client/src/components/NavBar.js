@@ -2,15 +2,16 @@ import React, { useContext } from 'react'
 import { Context } from '../index'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import { DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from '../utils/consts'
+import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from '../utils/consts'
 import Button from 'react-bootstrap/cjs/Button'
 import { observer } from 'mobx-react-lite'
-import Container from 'react-bootstrap/cjs/Container'
+import Container from 'react-bootstrap/Container'
 import { NavLink } from 'react-router-dom'
-// import NavLink from 'react-bootstrap/NavLink'
+import { useNavigate } from 'react-router-dom'
 
 const NavBar = observer(() => {
     const { user } = useContext(Context)
+    const navigate = useNavigate()
     return (
         <Navbar className="d-flex px-2" bg="dark" variant="dark">
             <Container>
@@ -23,15 +24,15 @@ const NavBar = observer(() => {
                 {user.isAuth ?
                     <Nav>
                         <Button
+                            onClick={()=>navigate(ADMIN_ROUTE)}
                             variant='outline-light'
                         >
                             Админ Панель
                         </Button>
                         <Button
+                            onClick={()=>navigate(LOGIN_ROUTE)}
                             variant='outline-light'
                             className='ms-2'
-                            onClick={() => user.setAuth(false)}
-
                         >
                             Выйти
                         </Button>
