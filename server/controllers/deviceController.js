@@ -40,18 +40,15 @@ class DeviceController {
             devices = await Device.findAndCountAll({ limit, offset })   //findAndCountAll (для пагинации) вернуть объект {count: общее число записей из БД, rows: [записи из БД]} (лимит вывода, сдвиг вывода)
         }
         if (brandId && !typeId) {
-            // devices = await Device.findAll({ where: { brandId },limit, offset })
             devices = await Device.findAndCountAll({ where: { brandId }, limit, offset })
         }
         if (!brandId && typeId) {
-            // devices = await Device.findAll({ where: { typeId },limit, offset })
             devices = await Device.findAndCountAll({ where: { typeId }, limit, offset })
         }
         if (brandId && typeId) {
-            // devices = await Device.findAll({ where: { brandId, typeId },limit, offset })
             devices = await Device.findAndCountAll({ where: { brandId, typeId }, limit, offset })
         }
-        return res.json(devices)
+        return res.json(devices)    // => {count: общее число удовлетворяющих записей из БД, rows: [записи из БД текущей страницы]
 
     }
 

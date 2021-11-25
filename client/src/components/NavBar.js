@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Context } from '../index'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -12,25 +12,34 @@ import { useNavigate } from 'react-router-dom'
 const NavBar = observer(() => {
     const { user } = useContext(Context)
     const navigate = useNavigate()
+
+    const logOut = () => {
+        user.setUser({})
+        user.setIsAuth(false)
+    }
+
     return (
         <Navbar className="d-flex px-2" bg="dark" variant="dark">
             <Container>
                 <NavLink
                     to={SHOP_ROUTE}
-                    style={{color:'white', textDecoration:'none'}}
+                    style={{ color: 'white', textDecoration: 'none' }}
                 >
                     КупиДевайс
                 </NavLink>
                 {user.isAuth ?
                     <Nav>
                         <Button
-                            onClick={()=>navigate(ADMIN_ROUTE)}
+                            onClick={() => {
+                                // debugger
+                                navigate(ADMIN_ROUTE)
+                            }}
                             variant='outline-light'
                         >
                             Админ Панель
                         </Button>
                         <Button
-                            onClick={()=>navigate(LOGIN_ROUTE)}
+                            onClick={() => { logOut() }}
                             variant='outline-light'
                             className='ms-2'
                         >
@@ -41,7 +50,7 @@ const NavBar = observer(() => {
                     <Nav>
                         <Button
                             variant='outline-light'
-                            onClick={() => user.setAuth(true)}
+                            onClick={() => { navigate(LOGIN_ROUTE) }}
                         >
                             Авторизация
                         </Button>
